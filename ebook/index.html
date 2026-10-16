@@ -145,6 +145,20 @@
     .single-cards p{color:var(--text-secondary);font-size:1rem;}
     .btn-outline{display:inline-flex;align-items:center;gap:0.6rem;border:2px solid var(--primary);color:var(--primary);font-weight:600;padding:0.85rem 1.6rem;border-radius:var(--radius);text-decoration:none;white-space:nowrap;transition:var(--transition);}
     .btn-outline:hover{background:var(--primary);color:#fff;}
+    .sample-section{padding:6rem 0;background:var(--surface);}
+    .sample-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+    .sample-frame{position:relative;display:block;max-width:440px;margin:0 auto;border-radius:10px;overflow:hidden;border:1px solid var(--border-color);box-shadow:0 24px 50px -12px rgba(13,34,49,0.28);transition:var(--transition);}
+    .sample-frame:hover{transform:translateY(-4px);box-shadow:0 30px 60px -12px rgba(13,34,49,0.35);}
+    .sample-frame img{width:100%;height:auto;display:block;}
+    .sample-badge{position:absolute;top:12px;right:12px;background:var(--secondary);color:#fff;font-size:0.75rem;font-weight:700;letter-spacing:0.12em;padding:0.35rem 0.7rem;border-radius:6px;}
+    .sample-zoom{position:absolute;bottom:12px;right:12px;background:rgba(13,34,49,0.85);color:#fff;font-size:0.8rem;font-weight:600;padding:0.4rem 0.75rem;border-radius:30px;}
+    .sample-text .eyebrow{display:inline-block;font-size:0.8rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--secondary);margin-bottom:0.75rem;}
+    .sample-text h2{font-size:clamp(1.75rem,3vw,2.4rem);font-weight:700;color:var(--primary);line-height:1.15;letter-spacing:-0.02em;margin-bottom:1rem;}
+    .sample-text p{color:var(--text-secondary);font-size:1.1rem;margin-bottom:1.25rem;}
+    .sample-list{list-style:none;display:flex;flex-direction:column;gap:0.7rem;}
+    .sample-list li{display:flex;gap:0.75rem;align-items:flex-start;}
+    .sample-list svg{color:var(--secondary);flex-shrink:0;margin-top:0.2rem;}
+    .card-sample{margin-top:4rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}
     footer{background-color:#0b1922;color:#64748b;padding:3rem 0;text-align:center;font-size:0.9rem;}
     @media (max-width:968px){
       .hero-content,.features-grid,.author-container{grid-template-columns:1fr;gap:3rem;}
@@ -156,6 +170,8 @@
       .author-container{text-align:center;}
       .author-image{max-width:280px;margin:0 auto;}
       .format-info{flex-direction:column;gap:0.5rem;}
+      .sample-grid,.card-sample{grid-template-columns:1fr;gap:2.5rem;}
+      .card-sample .sample-text{order:-1;}
       .kit-grid{grid-template-columns:1fr;gap:2.5rem;}
       .single-cards{flex-direction:column;align-items:flex-start;padding:1.5rem;}
       .kit-buy .btn{width:100%;}
@@ -272,6 +288,28 @@
     </div>
   </section>
 
+  <section class="sample-section" id="amostra">
+    <div class="container">
+      <div class="sample-grid">
+        <a href="imagens/amostra-atlas.jpg" target="_blank" rel="noopener" class="sample-frame" aria-label="Ampliar a amostra do Atlas">
+          <img src="imagens/amostra-atlas.jpg" alt="Página de amostra do Atlas: músculo Infraespinal" loading="lazy" width="820" height="1093">
+          <span class="sample-badge">AMOSTRA</span>
+          <span class="sample-zoom">Clique para ampliar</span>
+        </a>
+        <div class="sample-text">
+          <span class="eyebrow">Veja uma página do Atlas</span>
+          <h2>Cada músculo em uma ficha clara e ilustrada</h2>
+          <p>Esta é a ficha do Infraespinal, uma das 107 do Atlas. Todas seguem o mesmo padrão, para você encontrar a informação no mesmo lugar, sempre.</p>
+          <ul class="sample-list">
+            <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>Origem, inserção e ação</strong> logo no topo</span></li>
+            <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>Ilustrações do padrão de dor referida</strong> em vermelho</span></li>
+            <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>Pontos-gatilho marcados com X</strong> em cada figura</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="audience-section">
     <div class="container">
       <div class="section-header">
@@ -373,6 +411,24 @@
           </div>
         </div>
       </div>
+      <div class="card-sample">
+        <a href="imagens/amostra-card.jpg" target="_blank" rel="noopener" class="sample-frame" aria-label="Ampliar a amostra do card">
+          <img src="imagens/amostra-card.jpg" alt="Amostra do Card 07, Coluna vertebral (frente)" loading="lazy" width="820" height="998">
+          <span class="sample-badge">AMOSTRA</span>
+          <span class="sample-zoom">Clique para ampliar</span>
+        </a>
+        <div class="sample-text">
+          <span class="eyebrow">Veja um card por dentro</span>
+          <h2>Card 07 · Coluna vertebral</h2>
+          <p>Esta é a frente do card da coluna. Em uma folha, você tem as patologias da região e os padrões de dor referida dos músculos que mais aparecem no consultório.</p>
+          <ul class="sample-list">
+            <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>Patologias e disfunções</strong> relacionadas à região</span></li>
+            <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>Mapas de dor referida</strong> com os pontos-gatilho</span></li>
+            <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>Frente e verso</strong>, pronto para imprimir</span></li>
+          </ul>
+        </div>
+      </div>
+
       <div class="single-cards">
         <div>
           <h3>Precisa só de uma região?</h3>
