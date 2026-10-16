@@ -158,7 +158,8 @@
     .sample-list{list-style:none;display:flex;flex-direction:column;gap:0.7rem;}
     .sample-list li{display:flex;gap:0.75rem;align-items:flex-start;}
     .sample-list svg{color:var(--secondary);flex-shrink:0;margin-top:0.2rem;}
-    .card-sample{margin-top:4rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}
+    .card-sample{margin-top:6rem;padding-top:6rem;border-top:1px solid var(--border-color);display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+    .card-sample .sample-text{order:-1;}
     footer{background-color:#0b1922;color:#64748b;padding:3rem 0;text-align:center;font-size:0.9rem;}
     @media (max-width:968px){
       .hero-content,.features-grid,.author-container{grid-template-columns:1fr;gap:3rem;}
@@ -171,7 +172,8 @@
       .author-image{max-width:280px;margin:0 auto;}
       .format-info{flex-direction:column;gap:0.5rem;}
       .sample-grid,.card-sample{grid-template-columns:1fr;gap:2.5rem;}
-      .card-sample .sample-text{order:-1;}
+      .card-sample{margin-top:4rem;padding-top:4rem;}
+      .card-sample .sample-text{order:0;}
       .kit-grid{grid-template-columns:1fr;gap:2.5rem;}
       .single-cards{flex-direction:column;align-items:flex-start;padding:1.5rem;}
       .kit-buy .btn{width:100%;}
@@ -307,6 +309,25 @@
           </ul>
         </div>
       </div>
+
+
+      <div class="card-sample">
+          <a href="imagens/amostra-card.jpg" target="_blank" rel="noopener" class="sample-frame" aria-label="Ampliar a amostra do card">
+            <img src="imagens/amostra-card.jpg" alt="Amostra do Card 07, Coluna vertebral (frente)" loading="lazy" width="820" height="998">
+            <span class="sample-badge">AMOSTRA</span>
+            <span class="sample-zoom">Clique para ampliar</span>
+          </a>
+          <div class="sample-text">
+            <span class="eyebrow">Veja um card por dentro</span>
+            <h2>Card 07 · Coluna vertebral</h2>
+            <p>Esta é a frente do card da coluna. Em uma folha, você tem as patologias da região e os padrões de dor referida dos músculos que mais aparecem no consultório.</p>
+            <ul class="sample-list">
+              <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>Patologias e disfunções</strong> relacionadas à região</span></li>
+              <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>Mapas de dor referida</strong> com os pontos-gatilho</span></li>
+              <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>Frente e verso</strong>, pronto para imprimir</span></li>
+            </ul>
+          </div>
+        </div>
     </div>
   </section>
 
@@ -411,24 +432,7 @@
           </div>
         </div>
       </div>
-      <div class="card-sample">
-        <a href="imagens/amostra-card.jpg" target="_blank" rel="noopener" class="sample-frame" aria-label="Ampliar a amostra do card">
-          <img src="imagens/amostra-card.jpg" alt="Amostra do Card 07, Coluna vertebral (frente)" loading="lazy" width="820" height="998">
-          <span class="sample-badge">AMOSTRA</span>
-          <span class="sample-zoom">Clique para ampliar</span>
-        </a>
-        <div class="sample-text">
-          <span class="eyebrow">Veja um card por dentro</span>
-          <h2>Card 07 · Coluna vertebral</h2>
-          <p>Esta é a frente do card da coluna. Em uma folha, você tem as patologias da região e os padrões de dor referida dos músculos que mais aparecem no consultório.</p>
-          <ul class="sample-list">
-            <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>Patologias e disfunções</strong> relacionadas à região</span></li>
-            <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>Mapas de dor referida</strong> com os pontos-gatilho</span></li>
-            <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>Frente e verso</strong>, pronto para imprimir</span></li>
-          </ul>
-        </div>
-      </div>
-
+      
       <div class="single-cards">
         <div>
           <h3>Precisa só de uma região?</h3>
@@ -437,7 +441,6 @@
         <a href="../cards/" class="btn-outline">Ver cards avulsos <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
       </div>
     </div>
-      
   </section>
 
   <footer>
