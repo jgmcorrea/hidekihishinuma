@@ -160,6 +160,28 @@
     .sample-list svg{color:var(--secondary);flex-shrink:0;margin-top:0.2rem;}
     .card-sample{margin-top:6rem;padding-top:6rem;border-top:1px solid var(--border-color);display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
     .card-sample .sample-text{order:-1;}
+    .video-section{padding:5rem 0 4rem;background:var(--bg-color);}
+    .video-section .section-header{margin-bottom:2.5rem;}
+    .eyebrow{display:inline-block;font-size:0.8rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--secondary);margin-bottom:0.75rem;}
+    .video-frame{max-width:960px;margin:0 auto;border-radius:16px;overflow:hidden;background:#0b1922;box-shadow:0 30px 60px -15px rgba(13,34,49,0.35);}
+    .video-frame video{width:100%;height:auto;display:block;aspect-ratio:9/16;background:#0b1922;}
+    .video-frame.vertical{max-width:420px;}
+    .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:960px;margin:0 auto 5rem auto;}
+    .compare-card{background:var(--bg-color);border:1px solid var(--border-color);border-radius:16px;padding:2rem 2.25rem;}
+    .compare-icon{font-size:2rem;line-height:1;margin-bottom:0.9rem;}
+    .compare-card h3{font-size:1.35rem;color:var(--primary);margin-bottom:0.5rem;}
+    .compare-card p{color:var(--text-secondary);font-size:1.05rem;margin-bottom:1.25rem;}
+    .print-tip{font-size:0.95rem;color:var(--text-main);background:var(--surface);border-left:3px solid var(--secondary);border-radius:6px;padding:0.75rem 1rem;}
+    .print-tip strong{color:var(--primary);}
+    .sample-buy{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;margin-top:2rem;}
+    .sample-price{display:flex;flex-direction:column;line-height:1.1;}
+    .sample-price span{font-size:0.95rem;color:var(--text-secondary);}
+    .sample-price s{color:#94a3b8;}
+    .sample-price strong{font-size:2.4rem;font-weight:700;color:var(--primary);letter-spacing:-0.03em;}
+    .sample-price small{font-size:1rem;font-weight:600;margin-right:0.2rem;vertical-align:0.8rem;}
+    .sample-note{font-size:0.95rem !important;margin-top:1.25rem !important;}
+    .sample-note strong{color:var(--secondary);}
+    .sample-note a{color:var(--primary);font-weight:600;}
     footer{background-color:#0b1922;color:#64748b;padding:3rem 0;text-align:center;font-size:0.9rem;}
     @media (max-width:968px){
       .hero-content,.features-grid,.author-container{grid-template-columns:1fr;gap:3rem;}
@@ -171,7 +193,9 @@
       .author-container{text-align:center;}
       .author-image{max-width:280px;margin:0 auto;}
       .format-info{flex-direction:column;gap:0.5rem;}
-      .sample-grid,.card-sample{grid-template-columns:1fr;gap:2.5rem;}
+      .sample-grid,.card-sample,.compare-grid{grid-template-columns:1fr;gap:2.5rem;}
+      .compare-grid{gap:1.25rem;margin-bottom:4rem;}
+      .sample-buy .btn{width:100%;}
       .card-sample{margin-top:4rem;padding-top:4rem;}
       .card-sample .sample-text{order:0;}
       .kit-grid{grid-template-columns:1fr;gap:2.5rem;}
@@ -184,6 +208,8 @@
       .pain-card{padding:2rem 1.5rem;}
     }
   </style>
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
 
@@ -218,6 +244,90 @@
       </div>
     </div>
   </header>
+
+  <!-- ===== VÍDEO DO PROFESSOR ===== -->
+  <section class="video-section" id="video">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Assista antes de escolher</span>
+        <h2>O professor Hideki apresenta o Atlas e os Cards</h2>
+      </div>
+      <div class="video-frame vertical">
+        <video controls playsinline preload="metadata" poster="video/atlas-e-cards-capa.jpg" width="720" height="1280">
+          <source src="video/atlas-e-cards.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OS DOIS MATERIAIS + AMOSTRAS ===== -->
+  <section class="sample-section" id="amostra">
+    <div class="container">
+      <div class="section-header">
+        <h2>Dois materiais que se complementam</h2>
+        <p>O Atlas é para os estudos. Os Cards são para a consulta e o atendimento clínico.</p>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-card">
+          <div class="compare-icon">📘</div>
+          <h3>Atlas Clínico</h3>
+          <p>Origem, inserção, ação muscular e padrões de dor referida.</p>
+          <div class="print-tip"><strong>Impressão em gráfica:</strong> papel sulfite 120 g, encadernação wire-o.</div>
+        </div>
+        <div class="compare-card">
+          <div class="compare-icon">📋</div>
+          <h3>Cards de Consulta Rápida</h3>
+          <p>Principais patologias e disfunções por região, com os músculos e seus padrões de dor referida.</p>
+          <div class="print-tip"><strong>Impressão em gráfica:</strong> papel couchê 350 g, frente e verso de cada card, metade do tamanho A4.</div>
+        </div>
+      </div>
+
+      <div class="sample-grid">
+        <a href="imagens/amostra-atlas.jpg" target="_blank" rel="noopener" class="sample-frame" aria-label="Ampliar a amostra do Atlas">
+          <img src="imagens/amostra-atlas.jpg" alt="Página de amostra do Atlas: músculo Infraespinal" loading="lazy" width="820" height="1093">
+          <span class="sample-badge">AMOSTRA</span>
+          <span class="sample-zoom">Clique para ampliar</span>
+        </a>
+        <div class="sample-text">
+          <span class="eyebrow">Veja uma página do Atlas</span>
+          <h2>Cada músculo em uma ficha clara e ilustrada</h2>
+          <p>Esta é a ficha do Infraespinal, uma das 107 do Atlas. Todas seguem o mesmo padrão, para você encontrar a informação no mesmo lugar, sempre.</p>
+          <ul class="sample-list">
+            <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>Origem, inserção e ação</strong> logo no topo</span></li>
+            <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>Ilustrações do padrão de dor referida</strong> em vermelho</span></li>
+            <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>Pontos-gatilho marcados com X</strong> em cada figura</span></li>
+          </ul>
+          <div class="sample-buy">
+            <div class="sample-price"><span>De <s>R$ 79,90</s> por</span><strong><small>R$</small>39,90</strong></div>
+            <a href="https://pay.hotmart.com/N108027689P?checkoutMode=10" class="btn checkout-link" data-name="Atlas Clinico de Musculos e Dor Referida" data-value="39.90">Comprar o Atlas <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-sample">
+        <a href="imagens/amostra-card.jpg" target="_blank" rel="noopener" class="sample-frame" aria-label="Ampliar a amostra do card">
+          <img src="imagens/amostra-card.jpg" alt="Amostra do Card 07, Coluna vertebral (frente)" loading="lazy" width="820" height="998">
+          <span class="sample-badge">AMOSTRA</span>
+          <span class="sample-zoom">Clique para ampliar</span>
+        </a>
+        <div class="sample-text">
+          <span class="eyebrow">Cards de Consulta Rápida</span>
+          <h2>Para ter na sua clínica, ao lado da maca</h2>
+          <p>Cartões separados em 10 regiões, com as principais patologias e disfunções relacionadas e os músculos da região. Imprima, consulte para desenvolver o seu raciocínio clínico e deixe na sua mesa durante a anamnese. Na imagem, a frente do Card 07, da coluna vertebral.</p>
+          <ul class="sample-list">
+            <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>10 cards</strong>, um para cada região do corpo, em frente e verso (A4)</span></li>
+            <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>Ilustrações do padrão de dor referida</strong> com os pontos-gatilho marcados</span></li>
+            <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>Patologias e disfunções musculoesqueléticas</strong> relacionadas a cada região</span></li>
+          </ul>
+          <div class="sample-buy">
+            <div class="sample-price"><span>Kit com os 10 cards</span><strong><small>R$</small>49,90</strong></div>
+            <a href="https://pay.hotmart.com/D108044127E" class="btn checkout-link" data-name="Cards de Consulta Rapida - Kit 10" data-value="49.90">Comprar os 10 Cards <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+          </div>
+          <p class="sample-note">Vai levar o Atlas também? <strong>Comprando junto, os Cards saem por R$ 39,90</strong>: é só marcar a oferta na página de pagamento do Atlas. Precisa só de uma região? <a href="../cards/">Veja os cards avulsos por R$ 5,90</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="pain-section">
     <div class="container">
@@ -287,47 +397,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="sample-section" id="amostra">
-    <div class="container">
-      <div class="sample-grid">
-        <a href="imagens/amostra-atlas.jpg" target="_blank" rel="noopener" class="sample-frame" aria-label="Ampliar a amostra do Atlas">
-          <img src="imagens/amostra-atlas.jpg" alt="Página de amostra do Atlas: músculo Infraespinal" loading="lazy" width="820" height="1093">
-          <span class="sample-badge">AMOSTRA</span>
-          <span class="sample-zoom">Clique para ampliar</span>
-        </a>
-        <div class="sample-text">
-          <span class="eyebrow">Veja uma página do Atlas</span>
-          <h2>Cada músculo em uma ficha clara e ilustrada</h2>
-          <p>Esta é a ficha do Infraespinal, uma das 107 do Atlas. Todas seguem o mesmo padrão, para você encontrar a informação no mesmo lugar, sempre.</p>
-          <ul class="sample-list">
-            <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>Origem, inserção e ação</strong> logo no topo</span></li>
-            <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>Ilustrações do padrão de dor referida</strong> em vermelho</span></li>
-            <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>Pontos-gatilho marcados com X</strong> em cada figura</span></li>
-          </ul>
-        </div>
-      </div>
-
-
-      <div class="card-sample">
-          <a href="imagens/amostra-card.jpg" target="_blank" rel="noopener" class="sample-frame" aria-label="Ampliar a amostra do card">
-            <img src="imagens/amostra-card.jpg" alt="Amostra do Card 07, Coluna vertebral (frente)" loading="lazy" width="820" height="998">
-            <span class="sample-badge">AMOSTRA</span>
-            <span class="sample-zoom">Clique para ampliar</span>
-          </a>
-          <div class="sample-text">
-            <span class="eyebrow">Veja um card por dentro</span>
-            <h2>Card 07 · Coluna vertebral</h2>
-            <p>Esta é a frente do card da coluna. Em uma folha, você tem as patologias da região e os padrões de dor referida dos músculos que mais aparecem no consultório.</p>
-            <ul class="sample-list">
-              <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>Patologias e disfunções</strong> relacionadas à região</span></li>
-              <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>Mapas de dor referida</strong> com os pontos-gatilho</span></li>
-              <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>Frente e verso</strong>, pronto para imprimir</span></li>
-            </ul>
-          </div>
-        </div>
     </div>
   </section>
 
@@ -415,7 +484,7 @@
         <div class="kit-text">
           <span class="eyebrow">Complemento para a clínica</span>
           <h2>Cards de Consulta Rápida</h2>
-          <p>O resumo prático do Atlas para imprimir e deixar ao lado da maca. Um card para cada região do corpo, com o que você precisa ver na hora do atendimento.</p>
+          <p>Um material para ter na sua clínica: cartões separados em 10 regiões, com as principais patologias e disfunções relacionadas e os músculos da região. Para imprimir, consultar e deixar na sua mesa durante a anamnese.</p>
           <ul class="kit-list">
             <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>10 cards</strong>, um para cada região do corpo, em frente e verso (A4)</span></li>
             <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg><span><strong>Ilustrações do padrão de dor referida</strong> com os pontos-gatilho marcados</span></li>

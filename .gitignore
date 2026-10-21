@@ -1,0 +1,3 @@
+# Arquivos brutos que não vão para o site (o Cloudflare aceita no máximo 25 MB por arquivo)
+/ebook/*longo*.mp4
+/ebook/video/V*deo*.mp4
